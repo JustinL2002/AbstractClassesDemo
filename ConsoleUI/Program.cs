@@ -32,7 +32,48 @@ namespace ConsoleUI
             */
 
             // Create a list of Vehicle called vehicles
+            var vehicles = new List<Vehicle>();
 
+            var car1 = new Car()
+            {
+                HasTrunk = true,
+                Year = "2015",
+                Make = "Subaru",
+                Model = "Forester",
+            };
+            var motorcycle1 = new Motorcycle()
+            {
+                HasSideCart = true,
+                Year = "2020",
+                Make = "MotorCycle",
+                Model = "Super",
+            };
+            Vehicle vehicle1 = new Car()
+            {
+                HasTrunk = true,
+                Year = "2010",
+                Make = "Honda",
+                Model = "Civic",
+            };
+            Vehicle vehicle2 = new Motorcycle()
+            {
+                HasSideCart = false,
+                Year = "2017",
+                Make = "Motor",
+                Model = "Speedy",
+            };
+
+            vehicles.Add(car1);
+            vehicles.Add(motorcycle1);
+            vehicles.Add(vehicle1);
+            vehicles.Add(vehicle2);
+
+            foreach (var vehicle in vehicles)
+            {
+                Console.WriteLine($"Year: {vehicle.Year}");
+                Console.WriteLine($"Make: {vehicle.Make}");
+                Console.WriteLine($"Model: {vehicle.Model}");
+            }
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
              * - new it up as one of each derived class
